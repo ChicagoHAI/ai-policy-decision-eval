@@ -77,7 +77,7 @@ def rounded_column(ax, x, h, w, color, radius_px=7):
                                 mutation_aspect=px_per_x / px_per_y, fc=color, ec="none", zorder=3))
 
 
-def draw(column, title, subtitle, footnote, outname, include_baseline, bare=False):
+def draw(column, title, subtitle, footnote, outname, include_baseline, ylabel, bare=False):
     scores = load(column)
     rows = []
     for m, xs in scores.items():
@@ -91,7 +91,7 @@ def draw(column, title, subtitle, footnote, outname, include_baseline, bare=Fals
     plt.rcParams["font.family"] = ["Helvetica Neue", "Helvetica", "Arial", "DejaVu Sans"]
     if bare:
         fig = plt.figure(figsize=(16, 4.9), dpi=200, facecolor=SURFACE)
-        ax = fig.add_axes([0.045, 0.255, 0.94, 0.715], facecolor=SURFACE)
+        ax = fig.add_axes([0.06, 0.255, 0.925, 0.715], facecolor=SURFACE)
     else:
         fig = plt.figure(figsize=(16, 7.6), dpi=200, facecolor=SURFACE)
         ax = fig.add_axes([0.045, 0.30, 0.94, 0.52], facecolor=SURFACE)
@@ -130,7 +130,9 @@ def draw(column, title, subtitle, footnote, outname, include_baseline, bare=Fals
         ax.annotate(name, (i, 0), xytext=(0, -50), textcoords="offset points", ha="center",
                     va="top", fontsize=10.5, color=INK if logo else INK2, linespacing=1.15)
 
-    if not bare:
+    if bare:
+        ax.set_ylabel(ylabel, fontsize=12, color=INK2, labelpad=10)
+    else:
         fig.text(0.045, 0.94, title, fontsize=19, fontweight="bold", color=INK, ha="left")
         fig.text(0.045, 0.895, subtitle, fontsize=11.5, color=INK2, ha="left")
         fig.text(0.045, 0.045, footnote, fontsize=8.6, color=MUTED, ha="left", va="bottom", linespacing=1.5)
@@ -165,7 +167,8 @@ def draw_both(bare):
          "single evidence-based answer are not scored.\n"
          "*Median/modal answer of 46 surveyed policymakers (excludes the country-specific payroll question). "
          + SOURCE,
-         "evidence_ranking", include_baseline=True, bare=bare)
+         "evidence_ranking", include_baseline=True,
+         ylabel="Evidence alignment score", bare=bare)
     draw("final_human_score",
          "Which AI models answer most like the surveyed policymakers?",
          "Policymaker agreement score (0 to 100): closeness to the 46 policymakers' aggregate answer on all 19 "
@@ -173,7 +176,8 @@ def draw_both(bare):
          "Whiskers: 95% bootstrap interval over questions. Graded by Claude Opus 5.5 against the modal choice, "
          "median scale answer, mean ranking order or median number from the survey; declined answers score 0.\n"
          + SOURCE,
-         "policymaker_agreement", include_baseline=False, bare=bare)
+         "policymaker_agreement", include_baseline=False,
+         ylabel="Agreement with policymakers", bare=bare)
 
 
 if __name__ == "__main__":
