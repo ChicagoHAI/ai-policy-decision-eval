@@ -97,12 +97,16 @@ Policymaker answers and literature summaries come from Olken, Weiss and Hanna, "
 
 ```bibtex
 @misc{tan2026socialprotection,
-  author = {Tan, Chenhao and Claude},
+  author = {Tan, Chenhao},
   title  = {Do AI Models Know the Evidence on Social Protection?},
   year   = {2026},
   howpublished = {\url{https://github.com/ChicagoHAI/social-protection-ai-eval}}
 }
 ```
+
+## Acknowledgments
+
+Claude (Anthropic) assisted with writing the evaluation code, running the analysis, and drafting the text.
 
 ## License
 
