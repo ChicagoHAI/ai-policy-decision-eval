@@ -4,7 +4,8 @@
 # ///
 """Ranked column chart of evidence alignment, with vendor logos.
 
-Usage: uv run make_figure.py   (reads results/graded_answers.csv, writes figures/evidence_ranking.png/.svg)
+Usage: uv run make_figure.py   (reads results/graded_answers.csv, writes figures/*.png/.svg/.pdf)
+Each chart is also written as *_bare: the bars and whiskers only, without title, subtitle or footnote.
 """
 import csv
 import random
@@ -76,7 +77,7 @@ def rounded_column(ax, x, h, w, color, radius_px=7):
                                 mutation_aspect=px_per_x / px_per_y, fc=color, ec="none", zorder=3))
 
 
-def draw(column, title, subtitle, footnote, outname, include_baseline):
+def draw(column, title, subtitle, footnote, outname, include_baseline, bare=False):
     scores = load(column)
     rows = []
     for m, xs in scores.items():
@@ -88,8 +89,12 @@ def draw(column, title, subtitle, footnote, outname, include_baseline):
     rows.sort(key=lambda r: -r[1])
 
     plt.rcParams["font.family"] = ["Helvetica Neue", "Helvetica", "Arial", "DejaVu Sans"]
-    fig = plt.figure(figsize=(16, 7.6), dpi=200, facecolor=SURFACE)
-    ax = fig.add_axes([0.045, 0.30, 0.94, 0.52], facecolor=SURFACE)
+    if bare:
+        fig = plt.figure(figsize=(16, 4.9), dpi=200, facecolor=SURFACE)
+        ax = fig.add_axes([0.045, 0.255, 0.94, 0.715], facecolor=SURFACE)
+    else:
+        fig = plt.figure(figsize=(16, 7.6), dpi=200, facecolor=SURFACE)
+        ax = fig.add_axes([0.045, 0.30, 0.94, 0.52], facecolor=SURFACE)
     n = len(rows)
     ax.set_xlim(-0.6, n - 0.4)
     ax.set_ylim(0, 105)
@@ -114,6 +119,8 @@ def draw(column, title, subtitle, footnote, outname, include_baseline):
                 fontweight="bold", color=INK, zorder=6)
 
         name, logo = MODELS[m]
+        if bare:
+            name = name.rstrip("*")
         if logo:
             img = Image.open(LOGOS / f"{logo}.png").convert("RGBA")
             img.thumbnail((140, 140))
@@ -123,11 +130,14 @@ def draw(column, title, subtitle, footnote, outname, include_baseline):
         ax.annotate(name, (i, 0), xytext=(0, -50), textcoords="offset points", ha="center",
                     va="top", fontsize=10.5, color=INK if logo else INK2, linespacing=1.15)
 
-    fig.text(0.045, 0.94, title, fontsize=19, fontweight="bold", color=INK, ha="left")
-    fig.text(0.045, 0.895, subtitle, fontsize=11.5, color=INK2, ha="left")
-    fig.text(0.045, 0.045, footnote, fontsize=8.6, color=MUTED, ha="left", va="bottom", linespacing=1.5)
+    if not bare:
+        fig.text(0.045, 0.94, title, fontsize=19, fontweight="bold", color=INK, ha="left")
+        fig.text(0.045, 0.895, subtitle, fontsize=11.5, color=INK2, ha="left")
+        fig.text(0.045, 0.045, footnote, fontsize=8.6, color=MUTED, ha="left", va="bottom", linespacing=1.5)
 
     OUT.mkdir(exist_ok=True)
+    if bare:
+        outname += "_bare"
     for ext in ("png", "svg", "pdf"):
         fig.savefig(OUT / f"{outname}.{ext}", facecolor=SURFACE)
     plt.close(fig)
@@ -141,6 +151,11 @@ SOURCE = ("Questions and policymaker answers: Olken, Weiss and Hanna (2025), \"S
 
 
 def main():
+    for bare in (False, True):
+        draw_both(bare)
+
+
+def draw_both(bare):
     draw("final_evidence_score",
          "Which AI models' policy beliefs match the evidence on social protection?",
          "Evidence alignment score (0 to 100): agreement with the economics literature on 16 scored survey "
@@ -150,7 +165,7 @@ def main():
          "single evidence-based answer are not scored.\n"
          "*Median/modal answer of 46 surveyed policymakers (excludes the country-specific payroll question). "
          + SOURCE,
-         "evidence_ranking", include_baseline=True)
+         "evidence_ranking", include_baseline=True, bare=bare)
     draw("final_human_score",
          "Which AI models answer most like the surveyed policymakers?",
          "Policymaker agreement score (0 to 100): closeness to the 46 policymakers' aggregate answer on all 19 "
@@ -158,7 +173,7 @@ def main():
          "Whiskers: 95% bootstrap interval over questions. Graded by Claude Opus 5.5 against the modal choice, "
          "median scale answer, mean ranking order or median number from the survey; declined answers score 0.\n"
          + SOURCE,
-         "policymaker_agreement", include_baseline=False)
+         "policymaker_agreement", include_baseline=False, bare=bare)
 
 
 if __name__ == "__main__":
