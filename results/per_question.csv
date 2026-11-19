@@ -1,0 +1,266 @@
+model,question_id,gold_strength,n,committed,declined,invalid,evidence_score,human_agreement,answers
+deepseek-v4-pro,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+deepseek-v4-pro,B_consumption,clear,1,1,0,0,1.0,0.6,Increases a lot
+deepseek-v4-pro,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+deepseek-v4-pro,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+deepseek-v4-pro,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+deepseek-v4-pro,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+deepseek-v4-pro,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+deepseek-v4-pro,B_school_attendance,clear,1,1,0,0,1.0,0.75,Increases a lot
+deepseek-v4-pro,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+deepseek-v4-pro,C1,soft,1,1,0,0,0.6,0.6,Consumption > food security > targeting > health > schooling > employment > spending
+deepseek-v4-pro,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+deepseek-v4-pro,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+deepseek-v4-pro,E1,none,1,1,0,0,,0.55,PMT > Community-based > Geographic > Categorical > Multi-step application > Self-reported income > Work requirements > Tax records
+deepseek-v4-pro,F1,none,1,1,0,0,,0.35,"Labeled transfers (no conditions, but told intended use)"
+deepseek-v4-pro,G1,soft,1,1,0,0,0.7,0.55,15%
+deepseek-v4-pro,H1,clear,1,1,0,0,1.0,0.3,10%
+deepseek-v4-pro,I1,soft,1,1,0,0,0.5,1.0,Improves both health and economic outcomes
+deepseek-v4-pro,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+deepseek-v4-pro,J2,none,1,1,0,0,,0.4,Energy subsidy > Universal cash > Subsidized health insurance > Conditional cash > Targeted cash > In-kind
+fable-5.2,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+fable-5.2,B_consumption,clear,1,1,0,0,1.0,0.6,Increases a lot
+fable-5.2,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+fable-5.2,B_food_security,clear,1,1,0,0,1.0,1.0,Increases a little
+fable-5.2,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+fable-5.2,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+fable-5.2,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+fable-5.2,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+fable-5.2,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+fable-5.2,C1,soft,1,1,0,0,1.0,0.75,Targeting > food security > consumption > schooling > employment > health > spending type
+fable-5.2,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+fable-5.2,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+fable-5.2,E1,none,1,1,0,0,,0.55,PMT > community-based > geographic > categorical > work requirements > multi-step application > self-reported income > tax records
+fable-5.2,F1,none,1,1,0,0,,0.4,"Labeled transfers (no conditions enforced, but told intended uses)"
+fable-5.2,G1,soft,1,1,0,0,0.7,0.6,15% of the workforce
+fable-5.2,H1,clear,1,1,0,0,1.0,0.2,8%
+fable-5.2,I1,soft,1,1,0,0,1.0,0.1,Improves economic outcomes only
+fable-5.2,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+fable-5.2,J2,none,1,1,0,0,,0.15,Energy subsidy > Subsidized health insurance > In-kind transfer > Universal cash transfer > Conditional cash transfer > Targeted cash transfer
+gemini-4-argon,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+gemini-4-argon,B_consumption,clear,1,1,0,0,1.0,0.75,Increases a lot
+gemini-4-argon,B_fertility,clear,1,1,0,0,0.5,0.5,Increases a little
+gemini-4-argon,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+gemini-4-argon,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+gemini-4-argon,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+gemini-4-argon,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+gemini-4-argon,B_school_attendance,clear,1,1,0,0,1.0,0.75,Increases a lot
+gemini-4-argon,B_temptation_goods,clear,1,1,0,0,0.0,0.9,Increases a little
+gemini-4-argon,C1,soft,1,1,0,0,0.9,0.6,Targeting > food security > schooling > health > employment > spending type > household consumption
+gemini-4-argon,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+gemini-4-argon,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+gemini-4-argon,E1,none,1,1,0,0,,0.55,PMT > geographic > categorical > community-based > work requirements > multiple verification steps > tax records > self-reported income
+gemini-4-argon,F1,none,1,1,0,0,,1.0,Conditional transfers
+gemini-4-argon,G1,soft,1,1,0,0,0.7,0.6,20%
+gemini-4-argon,H1,clear,1,1,0,0,1.0,0.15,5%
+gemini-4-argon,I1,soft,1,1,0,0,0.5,1.0,Improves both health and economic outcomes
+gemini-4-argon,J1,soft,1,1,0,0,0.5,1.0,Strongly increases voter support
+gemini-4-argon,J2,none,1,1,0,0,,0.2,Energy subsidy > Subsidized health insurance > Conditional cash transfer > In-kind transfer > Universal cash transfer > Targeted cash transfer
+gemini-4-carbon,A1,soft,1,0,1,0,0.5,0.0,Declined to rank; leaned toward cash favored by economists and energy subsidies ranked lowest
+gemini-4-carbon,B_consumption,clear,1,1,0,0,1.0,0.75,Increases a lot
+gemini-4-carbon,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+gemini-4-carbon,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+gemini-4-carbon,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+gemini-4-carbon,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+gemini-4-carbon,B_labor_supply,clear,1,0,1,0,0.0,0.0,Refused to choose; lean toward no effect on adult labor supply per RCT evidence
+gemini-4-carbon,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+gemini-4-carbon,B_temptation_goods,clear,1,1,0,0,0.0,0.9,Increases a little
+gemini-4-carbon,C1,soft,1,1,0,0,0.7,0.9,Food security > targeting > consumption > schooling > health > employment > spending
+gemini-4-carbon,D1,soft,1,0,1,0,0.5,0.0,No single option; depends on value judgments (noted policymaker lean toward narrow targeting)
+gemini-4-carbon,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+gemini-4-carbon,E1,none,1,1,0,0,,0.5,PMT > geographic > community-based > categorical > work requirements > multiple verification steps > tax records > self-reported income
+gemini-4-carbon,F1,none,1,0,1,0,,0.0,Refused to choose; says it depends on context (first reply leaned slightly favorable toward labeled transfers)
+gemini-4-carbon,G1,soft,1,1,0,0,0.7,0.6,15%
+gemini-4-carbon,H1,clear,1,1,0,0,0.94,0.5,15%
+gemini-4-carbon,I1,soft,1,1,0,0,0.6,1.0,Improves both health and economic outcomes
+gemini-4-carbon,J1,soft,1,0,1,0,0.5,0.0,"Declined; says effects vary by context, with a slight lean toward modest gains among beneficiaries that are often muted or offset"
+gemini-4-carbon,J2,none,1,0,1,0,,0.0,Refused to rank; noted energy subsidies have intense loyalty and CCTs poll higher than targeted transfers among taxpayers
+glm-5.3,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+glm-5.3,B_consumption,clear,1,1,0,0,1.0,1.0,Increases a little
+glm-5.3,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+glm-5.3,B_food_security,clear,1,1,0,0,1.0,1.0,Increases a little
+glm-5.3,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+glm-5.3,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+glm-5.3,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+glm-5.3,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+glm-5.3,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+glm-5.3,C1,soft,1,1,0,0,0.7,0.7,Consumption > targeting > food security > schooling > health > spending > employment
+glm-5.3,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+glm-5.3,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+glm-5.3,E1,none,1,1,0,0,,0.45,PMT > community-based > geographic > categorical > self-reported income > multi-step verification > work requirements > tax records
+glm-5.3,F1,none,1,1,0,0,,0.35,"Labeled transfers (no conditions, but told intended use)"
+glm-5.3,G1,soft,1,1,0,0,0.8,0.7,20%
+glm-5.3,H1,clear,1,1,0,0,0.94,0.45,15%
+glm-5.3,I1,soft,1,1,0,0,1.0,0.1,Improves economic outcomes only
+glm-5.3,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+glm-5.3,J2,none,1,1,0,0,,0.35,Energy subsidy > Universal cash > Conditional cash > Subsidized health insurance > In-kind > Targeted cash
+gpt-6-astra,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+gpt-6-astra,B_consumption,clear,1,1,0,0,1.0,1.0,Increases a little
+gpt-6-astra,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+gpt-6-astra,B_food_security,clear,1,1,0,0,1.0,1.0,Increases a little
+gpt-6-astra,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+gpt-6-astra,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+gpt-6-astra,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+gpt-6-astra,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+gpt-6-astra,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+gpt-6-astra,C1,soft,1,1,0,0,0.55,0.6,Consumption > food security > targeting > schooling > health > employment > spending
+gpt-6-astra,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+gpt-6-astra,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+gpt-6-astra,E1,none,1,1,0,0,,0.6,PMT > community-based > geographic > categorical > multi-step verification > self-reported income > tax records > work requirements
+gpt-6-astra,F1,none,1,1,0,0,,0.35,Labeled transfers
+gpt-6-astra,G1,soft,1,1,0,0,0.8,0.7,20%
+gpt-6-astra,H1,clear,1,1,0,0,0.94,0.45,15%
+gpt-6-astra,I1,soft,1,1,0,0,0.5,1.0,Improves both health and economic outcomes
+gpt-6-astra,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+gpt-6-astra,J2,none,1,1,0,0,,0.35,Energy subsidy > Universal cash > Subsidized health insurance > Conditional cash > Targeted cash > In-kind
+grok-4.7,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+grok-4.7,B_consumption,clear,1,1,0,0,1.0,0.75,Increases a lot
+grok-4.7,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+grok-4.7,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+grok-4.7,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+grok-4.7,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+grok-4.7,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+grok-4.7,B_school_attendance,clear,1,1,0,0,1.0,0.7,Increases a lot
+grok-4.7,B_temptation_goods,clear,1,1,0,0,0.5,0.2,Decreases a little
+grok-4.7,C1,soft,1,1,0,0,0.4,0.45,Household consumption > food security > health > schooling > targeting > employment > spending
+grok-4.7,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+grok-4.7,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+grok-4.7,E1,none,1,1,0,0,,0.4,PMT > community-based > geographic > work requirements > categorical > multi-step application > self-reported income > tax records
+grok-4.7,F1,none,1,1,0,0,,1.0,Conditional transfers
+grok-4.7,G1,soft,1,1,0,0,0.85,0.7,20%
+grok-4.7,H1,clear,1,1,0,0,1.0,0.2,10%
+grok-4.7,I1,soft,1,1,0,0,1.0,0.1,Improves economic outcomes only
+grok-4.7,J1,soft,1,1,0,0,0.5,1.0,Strongly increases voter support
+grok-4.7,J2,none,1,1,0,0,,0.3,Energy subsidy > Subsidized health insurance > Universal cash transfer > Conditional cash transfer > Targeted cash transfer > In-kind transfer
+kimi-k3.1-pro,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+kimi-k3.1-pro,B_consumption,clear,1,1,0,0,1.0,0.75,Increases a lot
+kimi-k3.1-pro,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+kimi-k3.1-pro,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+kimi-k3.1-pro,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+kimi-k3.1-pro,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+kimi-k3.1-pro,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+kimi-k3.1-pro,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+kimi-k3.1-pro,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+kimi-k3.1-pro,C1,soft,1,1,0,0,0.7,0.9,"1 Food security, 2 Targeting, 3 Household consumption, 4 Schooling, 5 Health, 6 Employment, 7 Spending type"
+kimi-k3.1-pro,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+kimi-k3.1-pro,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+kimi-k3.1-pro,E1,none,1,1,0,0,,0.5,PMT > community-based > geographic > categorical > work requirements > multi-step verification > tax records > self-reported income
+kimi-k3.1-pro,F1,none,1,1,0,0,,0.3,"Labeled transfers (no conditions, but told intended use)"
+kimi-k3.1-pro,G1,soft,1,1,0,0,0.8,0.7,20% of the workforce
+kimi-k3.1-pro,H1,clear,1,1,0,0,1.0,0.3,10%
+kimi-k3.1-pro,I1,soft,1,1,0,0,1.0,0.1,Improves economic outcomes only
+kimi-k3.1-pro,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+kimi-k3.1-pro,J2,none,1,1,0,0,,0.4,Energy subsidy > Universal cash > Subsidized health insurance > Conditional cash > Targeted cash > In-kind
+mimo-v2.6-pro,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+mimo-v2.6-pro,B_consumption,clear,1,1,0,0,1.0,1.0,Increases a little
+mimo-v2.6-pro,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+mimo-v2.6-pro,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+mimo-v2.6-pro,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+mimo-v2.6-pro,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+mimo-v2.6-pro,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+mimo-v2.6-pro,B_school_attendance,clear,1,1,0,0,1.0,0.75,Increases a lot
+mimo-v2.6-pro,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+mimo-v2.6-pro,C1,soft,1,1,0,0,0.75,0.55,Consumption > targeting > food security > schooling > health > employment > spending
+mimo-v2.6-pro,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+mimo-v2.6-pro,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+mimo-v2.6-pro,E1,none,1,1,0,0,,0.35,PMT > community-based > geographic > categorical > self-reported income > work requirements > tax records > multiple verification steps
+mimo-v2.6-pro,F1,none,1,1,0,0,,0.35,"Labeled transfers (no conditions enforced, but told intended use)"
+mimo-v2.6-pro,G1,soft,1,1,0,0,0.8,0.6,20%
+mimo-v2.6-pro,H1,clear,1,1,0,0,0.94,0.4,15%
+mimo-v2.6-pro,I1,soft,1,1,0,0,0.5,1.0,Improves both health and economic outcomes
+mimo-v2.6-pro,J1,soft,1,1,0,0,1.0,0.6,Slightly increases voter support
+mimo-v2.6-pro,J2,none,1,1,0,0,,0.4,Universal cash > Energy subsidy > Subsidized health insurance > Conditional cash > Targeted cash > In-kind
+muse-wonder,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+muse-wonder,B_consumption,clear,1,1,0,0,1.0,0.75,Increases a lot
+muse-wonder,B_fertility,clear,1,1,0,0,0.0,0.3,Increases a little
+muse-wonder,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+muse-wonder,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+muse-wonder,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+muse-wonder,B_labor_supply,clear,1,1,0,0,0.0,0.5,Decreases a little
+muse-wonder,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+muse-wonder,B_temptation_goods,clear,1,1,0,0,0.0,0.9,Increases a little
+muse-wonder,C1,soft,1,1,0,0,1.0,0.8,"1 Targeting, 2 Food security, 3 Household consumption, 4 Schooling, 5 Health, 6 Employment, 7 Spending type"
+muse-wonder,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+muse-wonder,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+muse-wonder,E1,none,1,1,0,0,,0.6,PMT > community-based > geographic > categorical > multi-step verification > work requirements > self-reported income > tax records
+muse-wonder,F1,none,1,1,0,0,,1.0,Conditional transfers
+muse-wonder,G1,soft,1,1,0,0,0.75,0.6,15% of the workforce
+muse-wonder,H1,clear,1,1,0,0,0.51,0.8,30%
+muse-wonder,I1,soft,1,1,0,0,0.6,1.0,Improves both health and economic outcomes
+muse-wonder,J1,soft,1,1,0,0,0.5,1.0,Strongly increases voter support
+muse-wonder,J2,none,1,1,0,0,,0.6,Universal cash > Energy subsidy > Targeted cash > CCT > In-kind > Subsidized health insurance
+nemotron-3-ultra,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+nemotron-3-ultra,B_consumption,clear,1,1,0,0,1.0,0.75,Increases a lot
+nemotron-3-ultra,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+nemotron-3-ultra,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+nemotron-3-ultra,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+nemotron-3-ultra,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+nemotron-3-ultra,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+nemotron-3-ultra,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+nemotron-3-ultra,B_temptation_goods,clear,1,1,0,0,0.5,0.2,Decreases a little
+nemotron-3-ultra,C1,soft,1,1,0,0,0.3,0.55,Food security > consumption > schooling > health > employment > targeting > spending
+nemotron-3-ultra,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+nemotron-3-ultra,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+nemotron-3-ultra,E1,none,1,1,0,0,,0.7,PMT > categorical > geographic > community-based > multi-step application > self-reported income > work requirements > tax records
+nemotron-3-ultra,F1,none,1,1,0,0,,1.0,Conditional transfers
+nemotron-3-ultra,G1,soft,1,1,0,0,0.8,0.7,20%
+nemotron-3-ultra,H1,clear,1,1,0,0,1.0,0.3,10%
+nemotron-3-ultra,I1,soft,1,1,0,0,0.6,1.0,Improves both health and economic outcomes
+nemotron-3-ultra,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+nemotron-3-ultra,J2,none,1,1,0,0,,0.6,Universal cash > Energy subsidy > Targeted cash > Subsidized health insurance > Conditional cash > In-kind
+opus-5.5,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+opus-5.5,B_consumption,clear,1,1,0,0,1.0,0.6,Increases a lot
+opus-5.5,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+opus-5.5,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+opus-5.5,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+opus-5.5,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+opus-5.5,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+opus-5.5,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+opus-5.5,B_temptation_goods,clear,1,1,0,0,0.5,0.2,Decreases a little
+opus-5.5,C1,soft,1,1,0,0,0.7,0.6,Consumption > targeting > food security > schooling > health > employment > spending
+opus-5.5,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+opus-5.5,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+opus-5.5,E1,none,1,1,0,0,,0.55,PMT > community-based > geographic > categorical > work requirements > multi-step verification application > self-reported income > tax records
+opus-5.5,F1,none,1,1,0,0,,0.3,"Labeled transfers (no conditions, but told intended use)"
+opus-5.5,G1,soft,1,1,0,0,0.7,0.55,15% of the workforce
+opus-5.5,H1,clear,1,1,0,0,1.0,0.3,10%
+opus-5.5,I1,soft,1,1,0,0,0.0,0.0,Improves neither
+opus-5.5,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+opus-5.5,J2,none,1,1,0,0,,0.2,Energy subsidy > Universal cash transfer > Subsidized health insurance > In-kind transfer > Conditional cash transfer > Targeted cash transfer
+policymakers,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+policymakers,B_consumption,clear,1,1,0,0,1.0,1.0,Increases a little
+policymakers,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+policymakers,B_food_security,clear,1,1,0,0,1.0,1.0,Increases a little
+policymakers,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+policymakers,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+policymakers,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+policymakers,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+policymakers,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+policymakers,C1,soft,1,1,0,0,0.5,0.98,Food security > targeting > schooling > consumption > spending type > health > employment
+policymakers,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+policymakers,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+policymakers,E1,none,1,1,0,0,,1.0,Multiple verification > Categorical > PMT > Geographic > Community-based > Tax records > Work requirements > Self-reported income
+policymakers,F1,none,1,1,0,0,,1.0,Conditional transfers
+policymakers,H1,clear,1,1,0,0,0.31,0.95,37%
+policymakers,I1,soft,1,1,0,0,0.6,1.0,Improves both health and economic outcomes
+policymakers,J1,soft,1,1,0,0,0.5,1.0,Strongly increases voter support
+policymakers,J2,none,1,1,0,0,,1.0,Targeted cash > Universal cash > Conditional cash > Energy subsidy > Subsidized health insurance > In-kind
+qwen3.8-max,A1,soft,1,1,0,0,1.0,1.0,Cash > Vouchers > In-kind > Energy subsidies
+qwen3.8-max,B_consumption,clear,1,1,0,0,1.0,1.0,Increases a little
+qwen3.8-max,B_fertility,clear,1,1,0,0,1.0,1.0,No effect
+qwen3.8-max,B_food_security,clear,1,1,0,0,1.0,0.75,Increases a lot
+qwen3.8-max,B_health,clear,1,1,0,0,1.0,1.0,Increases a little
+qwen3.8-max,B_high_school_graduation,clear,1,1,0,0,1.0,1.0,Increases a little
+qwen3.8-max,B_labor_supply,clear,1,1,0,0,1.0,1.0,No effect
+qwen3.8-max,B_school_attendance,clear,1,1,0,0,1.0,1.0,Increases a little
+qwen3.8-max,B_temptation_goods,clear,1,1,0,0,1.0,0.5,No effect
+qwen3.8-max,C1,soft,1,1,0,0,1.0,0.7,Targeting > Household consumption > Food security > Schooling > Health > Employment > Spending type
+qwen3.8-max,D1,soft,1,1,0,0,1.0,1.0,Only the poorest 30% of households
+qwen3.8-max,D2,clear,1,1,0,0,1.0,1.0,Almost halved
+qwen3.8-max,E1,none,1,1,0,0,,0.5,PMT > community-based > geographic > categorical > work requirements > multi-step application > self-reported income > tax records
+qwen3.8-max,F1,none,1,1,0,0,,0.3,"Labeled transfers (no conditions, but told intended use)"
+qwen3.8-max,G1,soft,1,1,0,0,0.8,0.7,20%
+qwen3.8-max,H1,clear,1,1,0,0,0.94,0.45,15%
+qwen3.8-max,I1,soft,1,1,0,0,0.5,1.0,Improves both health and economic outcomes
+qwen3.8-max,J1,soft,1,1,0,0,1.0,0.5,Slightly increases voter support
+qwen3.8-max,J2,none,1,1,0,0,,0.45,Universal cash > Energy subsidy > Conditional cash > Subsidized health insurance > Targeted cash > In-kind

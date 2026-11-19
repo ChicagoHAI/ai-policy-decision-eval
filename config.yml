@@ -1,0 +1,102 @@
+# Model config for run_eval.py. All calls go through OpenRouter.
+#
+# providers: how to reach an API. type "openai" = OpenAI SDK against an OpenAI-compatible
+#   base_url; type "anthropic" = Anthropic SDK (kept for direct Claude access, unused now).
+#   Key: set api_key_env to an env var name (preferred), or api_key to the key itself.
+#   style: openrouter -> effort is sent as OpenRouter's reasoning.effort.
+# models: alias -> settings. The alias is the name used in results files.
+#   model:      OpenRouter model ID (see https://openrouter.ai/models)
+#   effort:     optional reasoning effort (low | medium | high)
+#   json_mode:  used when the model is a judge: schema | object | none
+#   extra:      optional dict passed straight into the API call (e.g. extra_body)
+# Model IDs below were taken from OpenRouter's model list on 2026-11-12.
+
+defaults:
+  samples: 1        # answers per model per question
+  workers: 8        # parallel API calls
+  max_tokens: 16000
+
+# How answers that refuse to commit ("it depends") are scored, by the question's gold_strength
+# (set per question in social_protection_questions.jsonl):
+#   clear = literature gives a settled answer; soft = it points in a direction but the exact
+#   answer is partly a judgment call; none = no single answer (declining is not scored).
+scoring:
+  declined_credit:
+    clear: 0.0
+    soft: 0.5
+    none: null
+  invalid_credit: 0.0            # empty / off-topic answers, where a gold exists
+  declined_human_agreement: 0.0  # policymakers all had to commit
+  invalid_human_agreement: 0.0
+
+providers:
+  openrouter:
+    type: openai
+    style: openrouter
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY   # export OPENROUTER_API_KEY=... before running
+
+models:
+  fable-5.2:
+    provider: openrouter
+    model: anthropic/claude-fable-5.2
+    effort: high
+    json_mode: schema
+  opus-5.5:
+    provider: openrouter
+    model: anthropic/claude-opus-5.5
+    effort: high
+    json_mode: schema
+  gpt-6-astra:
+    provider: openrouter
+    model: openai/gpt-6-astra
+    json_mode: schema
+  gemini-4-argon:
+    provider: openrouter
+    model: google/gemini-4-argon
+  gemini-4-carbon:
+    provider: openrouter
+    model: google/gemini-4-carbon
+  muse-wonder:
+    provider: openrouter
+    model: meta/muse-wonder         # alternatives: meta/muse-spark-1.3, meta/muse-ember
+  kimi-k3.1-pro:
+    provider: openrouter
+    model: moonshotai/kimi-k3.1-pro
+  glm-5.3:
+    provider: openrouter
+    model: z-ai/glm-5.3
+  deepseek-v4-pro:
+    provider: openrouter
+    model: deepseek/deepseek-v4-pro-0813
+  mimo-v2.6-pro:
+    provider: openrouter
+    model: xiaomi/mimo-v2.6-pro
+  grok-4.7:
+    provider: openrouter
+    model: x-ai/grok-4.7
+  qwen3.8-max:
+    provider: openrouter
+    model: qwen/qwen3.8-max-0902
+  nemotron-3-ultra:
+    provider: openrouter
+    model: nvidia/nemotron-3-ultra-550b-a55b
+
+# Default aliases to run (override with --models / --judges)
+answerers:
+  - fable-5.2
+  - opus-5.5
+  - gpt-6-astra
+  - gemini-4-argon
+  - gemini-4-carbon
+  - muse-wonder
+  - kimi-k3.1-pro
+  - glm-5.3
+  - deepseek-v4-pro
+  - mimo-v2.6-pro
+  - grok-4.7
+  - qwen3.8-max
+  - nemotron-3-ultra
+
+judges:
+  - opus-5.5
