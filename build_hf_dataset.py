@@ -12,6 +12,7 @@ parsed model answers) are stored as JSON strings so the dataset viewer can load 
 The original JSONL files are copied unchanged into raw/.
 """
 
+import csv
 import json
 import shutil
 import sys
@@ -33,6 +34,22 @@ def write_jsonl(path, rows):
 
 def read_jsonl(path):
     return [json.loads(l) for l in open(path) if l.strip()]
+
+
+def csv_rows(path):
+    """Read a CSV; columns where every non-empty value is numeric become floats, others stay strings."""
+    rows = list(csv.DictReader(open(path, newline="")))
+    for col in rows[0].keys() if rows else []:
+        vals = [r[col] for r in rows if r[col] != ""]
+        try:
+            [float(v) for v in vals]
+            numeric = bool(vals)
+        except ValueError:
+            numeric = False
+        for r in rows:
+            v = r[col]
+            r[col] = None if v == "" else (float(v) if numeric else v)
+    return rows
 
 
 def to_float(v):
@@ -100,8 +117,9 @@ def main(out):
         })
     write_jsonl(out / "data/grades.jsonl", grades)
 
+    # CSV tables are converted to JSONL: with mixed formats in one repo, `datasets` reads every file as JSON
     for name in ["graded_answers", "per_question", "summary"]:
-        shutil.copy(HERE / f"results/{name}.csv", out / f"data/{name}.csv")
+        write_jsonl(out / f"data/{name}.jsonl", csv_rows(HERE / f"results/{name}.csv"))
 
     raw = out / "raw"
     raw.mkdir(exist_ok=True)
