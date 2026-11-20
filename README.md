@@ -2,7 +2,7 @@
 
 Code and data for evaluating whether AI models' beliefs about social protection match the empirical evidence, using the policymaker survey in Olken, Weiss and Hanna (2025).
 
-Dataset on Hugging Face: [ChicagoHAI/social-protection-ai-eval](https://huggingface.co/datasets/ChicagoHAI/social-protection-ai-eval)
+Dataset on Hugging Face: [ChicagoHAI/ai-policy-decision-eval](https://huggingface.co/datasets/ChicagoHAI/ai-policy-decision-eval)
 
 ![Evidence alignment ranking](figures/evidence_ranking.png)
 
@@ -100,7 +100,7 @@ Policymaker answers and literature summaries come from Olken, Weiss and Hanna, "
   author = {Tan, Chenhao},
   title  = {Do AI Models Know the Evidence on Social Protection?},
   year   = {2026},
-  howpublished = {\url{https://github.com/ChicagoHAI/social-protection-ai-eval}}
+  howpublished = {\url{https://github.com/ChicagoHAI/ai-policy-decision-eval}}
 }
 ```
 

@@ -5,7 +5,7 @@
 """Build the Hugging Face dataset folder from the questions file and results/.
 
 Usage: uv run build_hf_dataset.py OUT_DIR
-Then:  hf upload ChicagoHAI/social-protection-ai-eval OUT_DIR --repo-type dataset
+Then:  hf upload ChicagoHAI/ai-policy-decision-eval OUT_DIR --repo-type dataset
 
 Nested fields whose types vary across rows (gold answers, policymaker answer distributions,
 parsed model answers) are stored as JSON strings so the dataset viewer can load every table.
